@@ -75,30 +75,30 @@
             <div>
                 <a><strong>Merci d'avoir répondu au questionnaire</strong></a>
             </div>
-            <div>
+            <!--Si jamais on nous demande de rentrer le lieu et la date de réalisation du formulaire-->
+            <!--<div>
                 <label for="ville">Fait à: </label>
                 <input type="text" id="ville_form" name="ville_formulaire">
-                <label>
-                    Le: <script>
-                            function dateFr()
-                                {
-                                // les noms de jours / mois
-                                var jours = new Array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi");
-                                var mois = new Array("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre");
-                                // on recupere la date
-                                var date = new Date();
-                                // on construit le message
-                                var message = jours[date.getDay()] + " ";   // nom du jour
-                                message += date.getDate() + " ";   // numero du jour
-                                message += mois[date.getMonth()] + " ";   // mois
-                                message += date.getFullYear();
-                                return message;
-                                }
+                <label>Le: <script>
+                                function dateFr()
+                                    {
+                                    // les noms de jours / mois
+                                    var jours = new Array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi");
+                                    var mois = new Array("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre");
+                                    // on recupere la date
+                                    var date = new Date();
+                                    // on construit le message
+                                    var message = jours[date.getDay()] + " ";   // nom du jour
+                                    message += date.getDate() + " ";   // numero du jour
+                                    message += mois[date.getMonth()] + " ";   // mois
+                                    message += date.getFullYear();
+                                    return message;
+                                    }
                                 var date = dateFr();
                                 document.write(date);
                             </script>
                 </label>
-            </div>
+            </div>-->
             <button type="submit">Validez</button>
             <button type="reset">Annulez</button>
         </form>
