@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Ce formulaire est pour but de lancer une grande enquête sur les anciens stagiaires de l'AFPA">
+        <title>Enquête sur les anciens stagiaires</title>
+    </head>
+    <body >
+        <h1 align=center>Nous lançons une grande enquête sur les anciens stagiaires</h1>
+        <h2 align=center>merci de nous répondre</h2>
+        <form action="formulaire_afpa.html">
+            <a><em><sup>*</sup>champs obligatoires</em></a>
+            <div>
+                <input type="text" id="nom" name="nom" required>
+                <label for="nom">Votre nom<sup>*</sup></label>
+            </div>
+            <div>
+                <input type="text" id="prenom" name="prenom" required>
+                <label for="prenom">Votre prénom<sup>*</sup></label>
+            </div>
+            <div>
+                <input type="date" id="date_naissance" name="date_de_naissance" required>
+                <label for="date_naissance">Votre date de naissance<sup>*</sup></label>
+            </div>
+            <div>
+                <input type="text" id="adresse" name="adresse" required>
+                <label for="adresse">Votre adresse<sup>*</sup></label>
+            </div>
+            <div>
+                <input type="text" id="ville" name="ville" required>
+                <label for="ville">Votre ville<sup>*</sup></label>
+            </div>
+            <div>
+                <input type="number" id="code_postal" name="code_postal" required>
+                <label for="code_postal">Votre code postal<sup>*</sup></label>
+            </div>
+            <div>
+                <input type="email" id="E-mail" name="E-mail" required placeholder="votre@email.com">
+                <label for="E-mail">Votre E-mail<sup>*</sup></label>
+            </div>
+
+            <div>
+                <input type="radio" name="sexe" id="masculin">
+                <label for="masculin">Vous êtes un homme</label>
+                <input type="radio" name="sexe" id="feminin">
+                <label for="feminin">Vous êtes une femme</label>
+            </div>
+            <div>
+                <select name="metier" id="metier">
+                    <option value="dev" selected>Développeur</option>
+                    <option value="ana">Analyste</option>
+                    <option value="cp">Chef de projet</option>
+                    <option value="Atr">Autre</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" id="autre_metier" name="autre_metier">
+                <label for="autre_metier">Si vous avez répondu autre, pécisez<sup>*</sup></label>
+            </div>
+            <div>
+                <select name="salaire" id="salaire">
+                    <option selected>&lsaquo;1000€</option>
+                    <option >&rsaquo;1000€ et &lsaquo;1500€</option>
+                    <option >&rsaquo;1500€ et &lsaquo;2000€</option>
+                    <option >&rsaquo;2000€</option>
+                </select>
+            </div>
+            <div>
+                <input type="number" id="annee_stage" name="annee_stage" required>
+                <label for="annee_stage">En quelle année avez-vous suivi le stage AFPA<sup>*</sup></label>
+            </div>
+            <div>
+                <textarea id="commentaire" name="commentaire" placeholder="Vos commentaires"></textarea>
+            </div>
+            <div>
+                <a><strong>Merci d'avoir répondu au questionnaire</strong></a>
+            </div>
+            <div>
+                <label for="ville">Fait à: </label>
+                <input type="text" id="ville_form" name="ville_formulaire">
+                <label>
+                    Le: <script>
+                            function dateFr()
+                                {
+                                // les noms de jours / mois
+                                var jours = new Array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi");
+                                var mois = new Array("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre");
+                                // on recupere la date
+                                var date = new Date();
+                                // on construit le message
+                                var message = jours[date.getDay()] + " ";   // nom du jour
+                                message += date.getDate() + " ";   // numero du jour
+                                message += mois[date.getMonth()] + " ";   // mois
+                                message += date.getFullYear();
+                                return message;
+                                }
+                                var date = dateFr();
+                                document.write(date);
+                            </script>
+                </label>
+            </div>
+            <button type="submit">Validez</button>
+            <button type="reset">Annulez</button>
+        </form>
+    </body>
+</html>
