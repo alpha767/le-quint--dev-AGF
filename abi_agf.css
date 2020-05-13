@@ -1,0 +1,36 @@
+/* juste une petite couleur de fond et de police */
+/* qui choisi pour Khaled est en vert */
+body {background-color: lightgreen;text-decoration-color: #060000; }
+  
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer{
+    margin-left: 40px;
+}
+
+#div-titre-site{
+    font-size: 30px;
+}
+
+#div-titre-page{
+    font-size: 30px;
+}
+.div-int {
+    padding: 2%;
+    /*
+    box-sizing: border-box;
+    border-color: #000000;
+    border-width 1px;
+    border-style: solid;
+    */
+}
+
+.box {
+    display: flex;
+    flex-flow: row wrap;
+}
+
